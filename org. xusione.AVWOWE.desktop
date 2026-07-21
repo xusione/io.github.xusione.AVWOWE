@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=AVWOWE
+Comment=OpenFrameworks Media Kiosk Application
+Exec=run.sh
+Icon=io.github.username.AVWOWE
+Categories=AudioVideo;Player;
