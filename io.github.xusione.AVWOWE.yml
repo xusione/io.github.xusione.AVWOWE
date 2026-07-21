@@ -20,13 +20,18 @@ modules:
     build-commands:
       # Install wrapper script
       - install -D -m 755 run.sh /app/bin/run.sh
-      # Install uppercase binary
-      - install -D -m 755 bin/AVWOWE /app/bin/AVWOWE
+
+      # Install uppercase binary (referenced as 'AVWOWE' in sandbox root)
+      - install -D -m 755 AVWOWE /app/bin/AVWOWE
+
       # Install data directory recursively alongside binary
       - cp -r data /app/bin/data
-      # Install Desktop entry and Metainfo
+
+      # Install Desktop entry, Metainfo, and Icon
       - install -D -m 644 io.github.xusione.AVWOWE.desktop /app/share/applications/io.github.xusione.AVWOWE.desktop
       - install -D -m 644 io.github.xusione.AVWOWE.metainfo.xml /app/share/metainfo/io.github.xusione.AVWOWE.metainfo.xml
+      - install -D -m 644 io.github.xusione.AVWOWE.png /app/share/icons/hicolor/512x512/apps/io.github.xusione.AVWOWE.png
+
     sources:
       - type: file
         path: run.sh
@@ -38,3 +43,5 @@ modules:
         path: io.github.xusione.AVWOWE.desktop
       - type: file
         path: io.github.xusione.AVWOWE.metainfo.xml
+      - type: file
+        path: io.github.xusione.AVWOWE.png
