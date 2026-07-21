@@ -15,6 +15,18 @@ finish-args:
   - --filesystem=home
 
 modules:
+  - name: glfw
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DBUILD_SHARED_LIBS=ON
+      - -DGLFW_BUILD_EXAMPLES=OFF
+      - -DGLFW_BUILD_TESTS=OFF
+      - -DGLFW_BUILD_DOCS=OFF
+    sources:
+      - type: archive
+        url: https://github.com/glfw/glfw/archive/refs/tags/3.4.tar.gz
+        sha256: 9128f0900227915570085a6e8df810c9e6aa8b58406f85108f92fd9c8aa97a4a
+
   - name: avwowe
     buildsystem: simple
     build-commands:
@@ -39,7 +51,7 @@ modules:
         path: bin/AVWOWE
       - type: dir
         path: data
-        dest: data      # Keeps folder named 'data' inside build environment
+        dest: data
       - type: file
         path: io.github.xusione.AVWOWE.desktop
       - type: file
