@@ -1,0 +1,18 @@
+[Application]
+name=io.github.xusione.AVWOWE
+runtime=org.freedesktop.Platform/x86_64/24.08
+sdk=org.freedesktop.Sdk/x86_64/24.08
+command=run.sh
+
+[Context]
+sockets=x11;wayland;pulseaudio;
+devices=dri;
+filesystems=home;
+
+[Extension io.github.xusione.AVWOWE.Debug]
+directory=lib/debug
+autodelete=true
+no-autodownload=true
+
+[Build]
+built-extensions=io.github.xusione.AVWOWE.Debug;

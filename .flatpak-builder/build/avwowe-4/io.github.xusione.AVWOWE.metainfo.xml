@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.xusione.AVWOWE</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>Proprietary</project_license>
+  <name>AVWOWE</name>
+  <summary>OpenFrameworks Media Kiosk Application</summary>
+
+  <description>
+    <p>
+      AVWOWE is a media kiosk application built with OpenFrameworks, designed for 
+      interactive installations and automated playback setups.
+    </p>
+  </description>
+
+  <launchable type="desktop-id">io.github.xusione.AVWOWE.desktop</launchable>
+  
+  <provides>
+    <binary>AVWOWE</binary>
+  </provides>
+</component>

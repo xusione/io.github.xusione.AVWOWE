@@ -21,10 +21,10 @@ modules:
       # Install wrapper script
       - install -D -m 755 run.sh /app/bin/run.sh
 
-      # Install uppercase binary (referenced as 'AVWOWE' in sandbox root)
+      # Install binary
       - install -D -m 755 AVWOWE /app/bin/AVWOWE
 
-      # Install data directory recursively alongside binary
+      # Copy data directory into /app/bin/data
       - cp -r data /app/bin/data
 
       # Install Desktop entry, Metainfo, and Icon
@@ -39,6 +39,7 @@ modules:
         path: bin/AVWOWE
       - type: dir
         path: data
+        dest: data      # Keeps folder named 'data' inside build environment
       - type: file
         path: io.github.xusione.AVWOWE.desktop
       - type: file

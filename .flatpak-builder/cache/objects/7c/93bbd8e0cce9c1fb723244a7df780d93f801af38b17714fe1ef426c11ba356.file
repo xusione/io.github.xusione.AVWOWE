@@ -1,0 +1,5 @@
+[Runtime]
+name=io.github.xusione.AVWOWE.Debug
+
+[ExtensionOf]
+ref=app/io.github.xusione.AVWOWE/x86_64/master
