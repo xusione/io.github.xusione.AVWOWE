@@ -25,7 +25,7 @@ modules:
     sources:
       - type: archive
         url: https://github.com/glfw/glfw/archive/refs/tags/3.4.tar.gz
-        sha256: 9128f0900227915570085a6e8df810c9e6aa8b58406f85108f92fd9c8aa97a4a
+        sha256: c038d34200234d071fae9345bc455e4a8f2f544ab60150765d7704e08f3dac01
 
   - name: avwowe
     buildsystem: simple
