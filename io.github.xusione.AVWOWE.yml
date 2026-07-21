@@ -16,12 +16,12 @@ finish-args:
 
 modules:
   - name: glfw
-    buildsystem: simple
-    build-commands:
-      - mkdir build
-      - cd build && cmake -DCMAKE_INSTALL_PREFIX=/app -DCMAKE_INSTALL_LIBDIR=lib -DBUILD_SHARED_LIBS=ON -DGLFW_BUILD_EXAMPLES=OFF -DGLFW_BUILD_TESTS=OFF -DGLFW_BUILD_DOCS=OFF ..
-      - cd build && make -j$(nproc)
-      - cd build && make install
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DBUILD_SHARED_LIBS=ON
+      - -DGLFW_BUILD_EXAMPLES=OFF
+      - -DGLFW_BUILD_TESTS=OFF
+      - -DGLFW_BUILD_DOCS=OFF
     sources:
       - type: archive
         url: https://github.com/glfw/glfw/archive/refs/tags/3.4.tar.gz
