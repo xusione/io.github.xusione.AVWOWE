@@ -32,8 +32,8 @@ Homepage: <https://avwowe.xusione.com/>
 Once published on Flathub:
 
 ```bash
-flatpak install flathub io.github.xusione.AVWOWE
-flatpak run io.github.xusione.AVWOWE
+flatpak install flathub com.xusione.AVWOWE
+flatpak run com.xusione.AVWOWE
 ```
 
 ## Build the Flatpak locally
@@ -44,15 +44,15 @@ Requires `flatpak` and `flatpak-builder`, plus the Freedesktop 24.08 runtime/SDK
 flatpak install flathub org.freedesktop.Platform//24.08 org.freedesktop.Sdk//24.08
 
 # Build and install into the user installation
-flatpak-builder --user --install --force-clean build-dir io.github.xusione.AVWOWE.yml
+flatpak-builder --user --install --force-clean build-dir com.xusione.AVWOWE.yml
 
-flatpak run io.github.xusione.AVWOWE
+flatpak run com.xusione.AVWOWE
 ```
 
 To verify nothing is missing at runtime inside the sandbox:
 
 ```bash
-flatpak run --command=sh io.github.xusione.AVWOWE \
+flatpak run --command=sh com.xusione.AVWOWE \
   -c 'LD_LIBRARY_PATH=/app/lib ldd /app/bin/AVWOWE | grep "not found"'
 ```
 
@@ -63,7 +63,7 @@ By default the sandbox can read/write the standard media directories
 path once — it persists across reboots and updates:
 
 ```bash
-flatpak override --user io.github.xusione.AVWOWE --filesystem=/path/to/media
+flatpak override --user com.xusione.AVWOWE --filesystem=/path/to/media
 ```
 
 ## Kiosk deployment
@@ -82,5 +82,5 @@ accessible after reboots and are picked up automatically on rescan.
 
 ## License
 
-Copyright © 2026 xusione. All rights reserved. AVWOWE is proprietary software;
+Copyright © 2026 XUSIONE. All rights reserved. AVWOWE is proprietary software;
 use is governed by the [End User License Agreement](LICENSE).

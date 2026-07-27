@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <id>io.github.xusione.AVWOWE</id>
+  <id>com.xusione.AVWOWE</id>
   <metadata_license>CC0-1.0</metadata_license>
   <!-- Proprietary is accepted by Flathub. Optionally point at your EULA:
        LicenseRef-proprietary=https://example.com/license -->
@@ -8,9 +8,8 @@
   <name>AVWOWE</name>
   <summary>Interactive media player and kiosk system</summary>
 
-  <!-- TODO: confirm developer name -->
-  <developer id="io.github.xusione">
-    <name>xusione</name>
+  <developer id="com.xusione">
+    <name>XUSIONE</name>
   </developer>
 
   <description>
@@ -28,7 +27,7 @@
     </ul>
   </description>
 
-  <launchable type="desktop-id">io.github.xusione.AVWOWE.desktop</launchable>
+  <launchable type="desktop-id">com.xusione.AVWOWE.desktop</launchable>
 
   <screenshots>
     <screenshot type="default">

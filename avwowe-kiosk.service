@@ -4,7 +4,7 @@
 #   systemctl --user enable --now avwowe-kiosk.service
 #
 # If your media lives outside ~/Videos, ~/Pictures, ~/Music, grant the path once:
-#   flatpak override --user io.github.xusione.AVWOWE --filesystem=/path/to/media
+#   flatpak override --user com.xusione.AVWOWE --filesystem=/path/to/media
 
 [Unit]
 Description=AVWOWE Flatpak Kiosk Service
@@ -12,7 +12,7 @@ After=graphical-session.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/flatpak run io.github.xusione.AVWOWE
+ExecStart=/usr/bin/flatpak run com.xusione.AVWOWE
 Restart=always
 RestartSec=2s
 
