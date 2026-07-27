@@ -1,5 +1,0 @@
-[Runtime]
-name=com.xusione.AVWOWE.Debug
-
-[ExtensionOf]
-ref=app/com.xusione.AVWOWE/x86_64/master
