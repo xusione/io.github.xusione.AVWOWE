@@ -1,0 +1,86 @@
+AVWOWE END USER LICENSE AGREEMENT
+
+Copyright (c) 2026 xusione. All rights reserved.
+
+IMPORTANT — READ CAREFULLY. This End User License Agreement ("Agreement") is a
+legal agreement between you (either an individual or a single entity, "You")
+and xusione ("Licensor") for the AVWOWE software application, including the
+compiled binary, bundled data, and accompanying materials ("Software"). By
+installing, copying, or otherwise using the Software, You agree to be bound by
+the terms of this Agreement. If You do not agree, do not install or use the
+Software.
+
+1. GRANT OF LICENSE
+   Subject to Your compliance with this Agreement, Licensor grants You a
+   non-exclusive, non-transferable, revocable license to install and use the
+   Software free of charge for personal and commercial purposes, including
+   display, digital signage, and kiosk installations. No other rights are
+   granted.
+
+2. REDISTRIBUTION
+   Licensor grants Flathub and its mirrors the right to host and distribute
+   the Software in unmodified Flatpak form for the purpose of making it
+   available to end users. Except as stated in this Section, You may not
+   distribute, sublicense, rent, lease, sell, or lend the Software.
+
+3. RESTRICTIONS
+   You may not: (a) reverse engineer, decompile, or disassemble the Software,
+   except to the extent such restriction is prohibited by applicable law;
+   (b) modify, adapt, or create derivative works of the Software; (c) remove
+   or alter any proprietary notices; or (d) use the Software in any unlawful
+   manner.
+
+4. OWNERSHIP
+   The Software is licensed, not sold. Licensor retains all right, title, and
+   interest in and to the Software, including all intellectual property rights.
+
+5. THIRD-PARTY COMPONENTS
+   The Software and its Flatpak runtime include third-party open-source
+   components that are licensed under their own respective terms. Those terms
+   govern your use of those components.
+
+6. DISCLAIMER OF WARRANTY
+   THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT.
+
+7. LIMITATION OF LIABILITY
+   TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL LICENSOR BE LIABLE
+   FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES,
+   OR ANY LOSS OF PROFITS OR DATA, ARISING OUT OF OR RELATED TO THE SOFTWARE.
+
+8. MANDATORY RIGHTS
+   Nothing in this Agreement excludes or limits Licensor's liability, or Your
+   rights, to the extent they cannot be excluded or limited under applicable
+   mandatory law. This includes mandatory consumer-protection rights and
+   liability for death or personal injury caused by negligence, or for intent
+   or gross negligence. Sections 6 and 7 apply only so far as such mandatory
+   law permits.
+
+9. TERMINATION
+   This Agreement is effective until terminated. It terminates automatically if
+   You breach any term. Upon termination You must cease all use and destroy all
+   copies of the Software.
+
+10. GOVERNING LAW AND JURISDICTION
+    This Agreement is governed by the substantive laws of Sweden, without regard
+    to its conflict-of-laws principles. If You are a consumer, this choice of
+    law does not deprive You of the protection afforded by the mandatory
+    provisions of the law of your country of habitual residence. The courts of
+    Sweden shall have jurisdiction over disputes arising out of or relating to
+    this Agreement, subject to any mandatory rules on consumer jurisdiction.
+
+11. SEVERABILITY
+    If any provision of this Agreement is held invalid or unenforceable by a
+    court of competent jurisdiction, that provision shall be limited or
+    eliminated to the minimum extent necessary, and the remaining provisions
+    shall remain in full force and effect.
+
+12. ENTIRE AGREEMENT
+    This Agreement constitutes the entire agreement between You and Licensor
+    regarding the Software and supersedes all prior or contemporaneous
+    understandings regarding its subject matter. Licensor may update this
+    Agreement for future versions of the Software.
+
+13. CONTACT
+    Questions about this Agreement may be directed to contact@xusione.com.

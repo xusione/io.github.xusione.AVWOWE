@@ -2,7 +2,9 @@
 Version=1.0
 Type=Application
 Name=AVWOWE
-Comment=OpenFrameworks Media Kiosk Application
+Comment=Turn media collections into nonstop ambient displays and kiosk installations
 Exec=run.sh
 Icon=io.github.xusione.AVWOWE
 Categories=AudioVideo;Player;
+Keywords=media;kiosk;player;display;signage;ambient;
+StartupWMClass=AVWOWE
