@@ -39,6 +39,7 @@ modules:
   - name: glfw
     buildsystem: cmake-ninja
     config-opts:
+      - -DCMAKE_INSTALL_LIBDIR=lib
       - -DBUILD_SHARED_LIBS=ON
       - -DGLFW_BUILD_EXAMPLES=OFF
       - -DGLFW_BUILD_TESTS=OFF
@@ -67,6 +68,7 @@ modules:
   - name: openal-soft
     buildsystem: cmake-ninja
     config-opts:
+      - -DCMAKE_INSTALL_LIBDIR=lib
       - -DALSOFT_EXAMPLES=OFF
       - -DALSOFT_UTILS=OFF
       - -DALSOFT_TESTS=OFF
@@ -78,6 +80,7 @@ modules:
   - name: pugixml
     buildsystem: cmake-ninja
     config-opts:
+      - -DCMAKE_INSTALL_LIBDIR=lib
       - -DBUILD_SHARED_LIBS=ON
     sources:
       - type: archive
@@ -87,6 +90,7 @@ modules:
   - name: uriparser
     buildsystem: cmake-ninja
     config-opts:
+      - -DCMAKE_INSTALL_LIBDIR=lib
       - -DURIPARSER_BUILD_DOCS=OFF
       - -DURIPARSER_BUILD_TESTS=OFF
     sources:
@@ -109,6 +113,7 @@ modules:
   - name: libsndfile
     buildsystem: cmake-ninja
     config-opts:
+      - -DCMAKE_INSTALL_LIBDIR=lib
       - -DBUILD_TESTING=OFF
       - -DBUILD_PROGRAMS=OFF
       - -DBUILD_EXAMPLES=OFF
