@@ -7,10 +7,12 @@ playback, scrolling tickers, dynamic overlays, picture-in-picture layers,
 live remote content, and frame-accurate PNG export. Built for home screens,
 storefront displays, events, and ambient installations.
 
-Homepage: <https://avwowe.xusione.com/>
+Homepage and user guide: https://avwowe.xusione.com/
 
-> AVWOWE is proprietary software. See [LICENSE](LICENSE) for terms.
+> AVWOWE is proprietary software, free to use. See [LICENSE](LICENSE) for terms.
 > This repository packages the application as a [Flatpak](https://flatpak.org/).
+
+![AVWOWE](screenshots/1.jpg)
 
 ## Features
 
@@ -29,7 +31,10 @@ Homepage: <https://avwowe.xusione.com/>
 
 ## Install
 
-Once published on Flathub:
+Native builds for Raspberry Pi OS and Ubuntu are available from
+<https://avwowe.xusione.com/>.
+
+Once published on Flathub, this Flatpak build (x86_64) will be installable with:
 
 ```bash
 flatpak install flathub com.xusione.AVWOWE
@@ -38,14 +43,15 @@ flatpak run com.xusione.AVWOWE
 
 ## Build the Flatpak locally
 
-Requires `flatpak` and `flatpak-builder`, plus the Freedesktop 24.08 runtime/SDK:
+Requires `flatpak` and `flatpak-builder`, plus the Freedesktop 24.08
+runtime/SDK and the ffmpeg extension for video and audio codecs:
 
 ```bash
-flatpak install flathub org.freedesktop.Platform//24.08 org.freedesktop.Sdk//24.08
+flatpak install --user flathub org.freedesktop.Platform//24.08 org.freedesktop.Sdk//24.08 org.freedesktop.Platform.ffmpeg-full//24.08
+```
 
-# Build and install into the user installation
+```bash
 flatpak-builder --user --install --force-clean build-dir com.xusione.AVWOWE.yml
-
 flatpak run com.xusione.AVWOWE
 ```
 
@@ -79,6 +85,11 @@ systemctl --user enable --now avwowe-kiosk.service
 
 Pair it with the `flatpak override` above so configured media folders remain
 accessible after reboots and are picked up automatically on rescan.
+
+## Support the project
+
+AVWOWE is free. If it is useful to you, donations are welcome at
+<https://www.xusione.com/donate/>.
 
 ## License
 
