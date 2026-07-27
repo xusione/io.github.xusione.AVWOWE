@@ -1,0 +1,24 @@
+[Application]
+name=com.xusione.AVWOWE
+runtime=org.freedesktop.Platform/x86_64/24.08
+sdk=org.freedesktop.Sdk/x86_64/24.08
+command=run.sh
+
+[Context]
+shared=network;ipc;
+sockets=x11;pulseaudio;
+devices=dri;
+filesystems=xdg-pictures;xdg-videos;xdg-music;
+
+[Extension org.freedesktop.Platform.ffmpeg-full]
+directory=lib/ffmpeg
+add-ld-path=.
+version=24.08
+
+[Extension com.xusione.AVWOWE.Debug]
+directory=lib/debug
+autodelete=true
+no-autodownload=true
+
+[Build]
+built-extensions=com.xusione.AVWOWE.Debug;

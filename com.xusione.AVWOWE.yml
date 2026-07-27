@@ -32,6 +32,10 @@ finish-args:
   - --filesystem=xdg-videos
   - --filesystem=xdg-pictures
   - --filesystem=xdg-music
+  # The app keeps its settings, presets and remote-config caches in ~/.avwowe.
+  # --persist maps that into the app's private per-install directory so the
+  # writes succeed and survive restarts and updates.
+  - --persist=.avwowe
 
 # Required so the ffmpeg-full extension has a mount point.
 cleanup-commands:
