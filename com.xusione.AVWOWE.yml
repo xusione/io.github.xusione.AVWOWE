@@ -149,6 +149,36 @@ modules:
         url: https://downloads.sourceforge.net/freeimage/FreeImage3180.zip
         sha256: f41379682f9ada94ea7b34fe86bf9ee00935a3147be41b6569c9605a53e438fd
 
+  # Needed only to build xset, which links the small libXmuu part of this
+  # package. libXmu itself is not used by the app at runtime.
+  - name: libXmu
+    config-opts:
+      - --disable-static
+    cleanup:
+      - /include
+      - /lib/pkgconfig
+      - /share/man
+    sources:
+      - type: archive
+        url: https://www.x.org/releases/individual/lib/libXmu-1.2.1.tar.xz
+        sha256: fcb27793248a39e5fcc5b9c4aec40cc0734b3ca76aac3d7d1c264e7f7e14e8b2
+
+  # The app shells out to `xset` to stop the display blanking or sleeping during
+  # playback, which matters for unattended kiosk installations. xset is not part
+  # of the Freedesktop runtime, so it is built here.
+  - name: xset
+    config-opts:
+      - --without-xf86misc
+      - --without-fontcache
+    cleanup:
+      - /include
+      - /lib/pkgconfig
+      - /share/man
+    sources:
+      - type: archive
+        url: https://www.x.org/releases/individual/app/xset-1.2.6.tar.xz
+        sha256: 623837349ea887bc003f01ee2e4b6b8ddd9c2774f632c6d70eead1b56306b695
+
   - name: avwowe
     buildsystem: simple
     build-commands:
