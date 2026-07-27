@@ -1,0 +1,14 @@
+# flatpak-builder build cache and output
+.flatpak-builder/
+build/
+build-dir/
+repo/
+.flatpak/
+*.flatpak
+
+# local screenshot originals (pre-downscale backups)
+screenshots/.orig/
+
+# OS cruft
+.DS_Store
+Thumbs.db
