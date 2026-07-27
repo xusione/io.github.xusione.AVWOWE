@@ -149,22 +149,15 @@ modules:
     buildsystem: simple
     build-commands:
       - install -D -m 755 run.sh /app/bin/run.sh
-      - install -D -m 755 AVWOWE /app/bin/AVWOWE
+      - install -D -m 755 bin/AVWOWE /app/bin/AVWOWE
       - cp -r data /app/bin/data
       - install -D -m 644 com.xusione.AVWOWE.desktop /app/share/applications/com.xusione.AVWOWE.desktop
       - install -D -m 644 com.xusione.AVWOWE.metainfo.xml /app/share/metainfo/com.xusione.AVWOWE.metainfo.xml
       - install -D -m 644 com.xusione.AVWOWE.png /app/share/icons/hicolor/512x512/apps/com.xusione.AVWOWE.png
     sources:
-      - type: file
-        path: run.sh
-      - type: file
-        path: bin/AVWOWE
-      - type: dir
-        path: data
-        dest: data
-      - type: file
-        path: com.xusione.AVWOWE.desktop
-      - type: file
-        path: com.xusione.AVWOWE.metainfo.xml
-      - type: file
-        path: com.xusione.AVWOWE.png
+      # GitHub's auto-generated release tarball of the packaging repo, which
+      # contains the binary (bin/AVWOWE), data/, run.sh, desktop, metainfo, icon.
+      # TODO: fill in sha256 once the v1.0.0 release is tagged.
+      - type: archive
+        url: https://github.com/xusione/io.github.xusione.AVWOWE/archive/refs/tags/v1.0.0.tar.gz
+        sha256: 0000000000000000000000000000000000000000000000000000000000000000
