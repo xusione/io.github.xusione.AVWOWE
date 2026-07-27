@@ -124,11 +124,13 @@ modules:
   - name: freeimage
     no-autogen: true
     buildsystem: simple
-    build-options:
-      cxxflags: -std=c++14 -fpermissive -w
     build-commands:
-      - make -f Makefile.gnu -j$(nproc) libfreeimage.so.3.18.0
-      - install -Dm644 Dist/libfreeimage-3.18.0.so /app/lib/libfreeimage.so.3.18.0
+      # Inject flags via CC/CXX (not build-options): Makefile.gnu folds its -I
+      # include paths into CFLAGS, so overriding CFLAGS/CXXFLAGS would drop them.
+      # Modern GCC makes implicit-function-declaration a hard error; the bundled
+      # ZLib/LibRaw/OpenEXR/JXR predate that, so downgrade it and relax C++.
+      - make -f Makefile.gnu -j$(nproc) CC="gcc -fPIC -fcommon -Wno-implicit-function-declaration -Wno-error=implicit-function-declaration" CXX="g++ -fPIC -fcommon -std=c++14 -fpermissive -w" libfreeimage-3.18.0.so
+      - install -Dm644 libfreeimage-3.18.0.so /app/lib/libfreeimage.so.3.18.0
       - ln -sf libfreeimage.so.3.18.0 /app/lib/libfreeimage.so.3
       - ln -sf libfreeimage.so.3 /app/lib/libfreeimage.so
     sources:

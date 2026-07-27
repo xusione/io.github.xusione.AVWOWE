@@ -1,0 +1,204 @@
+{
+  "id" : "io.github.xusione.AVWOWE",
+  "runtime" : "org.freedesktop.Platform",
+  "runtime-version" : "24.08",
+  "runtime-commit" : "9a6d66049b19987a22bf81015ce0d1fde260df85a45e54695aad3c82f1e198ee",
+  "sdk" : "org.freedesktop.Sdk",
+  "sdk-commit" : "4b619a0fd13462e43211bc8f2c427b13dc70ad601d6c2dde446df8ce1870155b",
+  "command" : "run.sh",
+  "modules" : [
+    {
+      "name" : "glfw",
+      "buildsystem" : "cmake-ninja",
+      "config-opts" : [
+        "-DBUILD_SHARED_LIBS=ON",
+        "-DGLFW_BUILD_EXAMPLES=OFF",
+        "-DGLFW_BUILD_TESTS=OFF",
+        "-DGLFW_BUILD_DOCS=OFF"
+      ],
+      "sources" : [
+        {
+          "url" : "https://github.com/glfw/glfw/archive/refs/tags/3.4.tar.gz",
+          "sha256" : "c038d34200234d071fae9345bc455e4a8f2f544ab60150765d7704e08f3dac01",
+          "type" : "archive"
+        }
+      ]
+    },
+    {
+      "name" : "glew",
+      "no-autogen" : true,
+      "make-args" : [
+        "GLEW_PREFIX=${FLATPAK_DEST}",
+        "GLEW_DEST=${FLATPAK_DEST}",
+        "LIBDIR=${FLATPAK_DEST}/lib",
+        "CFLAGS.EXTRA=-fPIC"
+      ],
+      "make-install-args" : [
+        "GLEW_PREFIX=${FLATPAK_DEST}",
+        "GLEW_DEST=${FLATPAK_DEST}",
+        "LIBDIR=${FLATPAK_DEST}/lib"
+      ],
+      "sources" : [
+        {
+          "url" : "https://github.com/nigels-com/glew/releases/download/glew-2.2.0/glew-2.2.0.tgz",
+          "sha256" : "d4fc82893cfb00109578d0a1a2337fb8ca335b3ceccf97b97e5cc7f08e4353e1",
+          "type" : "archive"
+        }
+      ]
+    },
+    {
+      "name" : "openal-soft",
+      "buildsystem" : "cmake-ninja",
+      "config-opts" : [
+        "-DALSOFT_EXAMPLES=OFF",
+        "-DALSOFT_UTILS=OFF",
+        "-DALSOFT_TESTS=OFF"
+      ],
+      "sources" : [
+        {
+          "url" : "https://github.com/kcat/openal-soft/archive/refs/tags/1.23.1.tar.gz",
+          "sha256" : "dfddf3a1f61059853c625b7bb03de8433b455f2f79f89548cbcbd5edca3d4a4a",
+          "type" : "archive"
+        }
+      ]
+    },
+    {
+      "name" : "pugixml",
+      "buildsystem" : "cmake-ninja",
+      "config-opts" : [
+        "-DBUILD_SHARED_LIBS=ON"
+      ],
+      "sources" : [
+        {
+          "url" : "https://github.com/zeux/pugixml/releases/download/v1.14/pugixml-1.14.tar.gz",
+          "sha256" : "2f10e276870c64b1db6809050a75e11a897a8d7456c4be5c6b2e35a11168a015",
+          "type" : "archive"
+        }
+      ]
+    },
+    {
+      "name" : "uriparser",
+      "buildsystem" : "cmake-ninja",
+      "config-opts" : [
+        "-DURIPARSER_BUILD_DOCS=OFF",
+        "-DURIPARSER_BUILD_TESTS=OFF"
+      ],
+      "sources" : [
+        {
+          "url" : "https://github.com/uriparser/uriparser/releases/download/uriparser-0.9.8/uriparser-0.9.8.tar.gz",
+          "sha256" : "4cd0e4f93b477272fabceeb0202f269169fe6ec3044e10fac6acbcdf354bb080",
+          "type" : "archive"
+        }
+      ]
+    },
+    {
+      "name" : "mpg123",
+      "config-opts" : [
+        "--with-default-audio=dummy",
+        "--enable-modules=no"
+      ],
+      "sources" : [
+        {
+          "url" : "https://www.mpg123.de/download/mpg123-1.32.6.tar.bz2",
+          "sha256" : "ccdd1d0abc31d73d8b435fc658c79049d0a905b30669b6a42a03ad169dc609e6",
+          "type" : "archive"
+        }
+      ]
+    },
+    {
+      "name" : "libsndfile",
+      "buildsystem" : "cmake-ninja",
+      "config-opts" : [
+        "-DBUILD_TESTING=OFF",
+        "-DBUILD_PROGRAMS=OFF",
+        "-DBUILD_EXAMPLES=OFF"
+      ],
+      "sources" : [
+        {
+          "url" : "https://github.com/libsndfile/libsndfile/releases/download/1.2.2/libsndfile-1.2.2.tar.xz",
+          "sha256" : "3799ca9924d3125038880367bf1468e53a1b7e3686a934f098b7e1d286cdb80e",
+          "type" : "archive"
+        }
+      ]
+    },
+    {
+      "name" : "freeimage",
+      "no-autogen" : true,
+      "buildsystem" : "simple",
+      "sources" : [
+        {
+          "url" : "https://downloads.sourceforge.net/freeimage/FreeImage3180.zip",
+          "sha256" : "f41379682f9ada94ea7b34fe86bf9ee00935a3147be41b6569c9605a53e438fd",
+          "type" : "archive"
+        }
+      ],
+      "build-commands" : [
+        "make -f Makefile.gnu -j$(nproc) CC=\"gcc -fPIC -fcommon -Wno-implicit-function-declaration -Wno-error=implicit-function-declaration\" CXX=\"g++ -fPIC -fcommon -std=c++14 -fpermissive -w\" libfreeimage-3.18.0.so",
+        "install -Dm644 libfreeimage-3.18.0.so /app/lib/libfreeimage.so.3.18.0",
+        "ln -sf libfreeimage.so.3.18.0 /app/lib/libfreeimage.so.3",
+        "ln -sf libfreeimage.so.3 /app/lib/libfreeimage.so"
+      ]
+    },
+    {
+      "name" : "avwowe",
+      "buildsystem" : "simple",
+      "sources" : [
+        {
+          "path" : "run.sh",
+          "type" : "file"
+        },
+        {
+          "path" : "bin/AVWOWE",
+          "type" : "file"
+        },
+        {
+          "dest" : "data",
+          "path" : "data",
+          "type" : "dir"
+        },
+        {
+          "path" : "io.github.xusione.AVWOWE.desktop",
+          "type" : "file"
+        },
+        {
+          "path" : "io.github.xusione.AVWOWE.metainfo.xml",
+          "type" : "file"
+        },
+        {
+          "path" : "io.github.xusione.AVWOWE.png",
+          "type" : "file"
+        }
+      ],
+      "build-commands" : [
+        "install -D -m 755 run.sh /app/bin/run.sh",
+        "install -D -m 755 AVWOWE /app/bin/AVWOWE",
+        "cp -r data /app/bin/data",
+        "install -D -m 644 io.github.xusione.AVWOWE.desktop /app/share/applications/io.github.xusione.AVWOWE.desktop",
+        "install -D -m 644 io.github.xusione.AVWOWE.metainfo.xml /app/share/metainfo/io.github.xusione.AVWOWE.metainfo.xml",
+        "install -D -m 644 io.github.xusione.AVWOWE.png /app/share/icons/hicolor/512x512/apps/io.github.xusione.AVWOWE.png"
+      ]
+    }
+  ],
+  "cleanup-commands" : [
+    "mkdir -p /app/lib/ffmpeg"
+  ],
+  "finish-args" : [
+    "--socket=x11",
+    "--socket=fallback-x11",
+    "--socket=wayland",
+    "--device=dri",
+    "--socket=pulseaudio",
+    "--share=network",
+    "--filesystem=xdg-videos",
+    "--filesystem=xdg-pictures",
+    "--filesystem=xdg-music"
+  ],
+  "add-extensions" : {
+    "org.freedesktop.Platform.ffmpeg-full" : {
+      "directory" : "lib/ffmpeg",
+      "add-ld-path" : ".",
+      "version" : "24.08"
+    }
+  },
+  "source-date-epoch" : 1785160744
+}
