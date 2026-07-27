@@ -155,9 +155,8 @@ modules:
       - install -D -m 644 com.xusione.AVWOWE.metainfo.xml /app/share/metainfo/com.xusione.AVWOWE.metainfo.xml
       - install -D -m 644 com.xusione.AVWOWE.png /app/share/icons/hicolor/512x512/apps/com.xusione.AVWOWE.png
     sources:
-      # GitHub's auto-generated release tarball of the packaging repo, which
-      # contains the binary (bin/AVWOWE), data/, run.sh, desktop, metainfo, icon.
-      # TODO: fill in sha256 once the v1.0.0 release is tagged.
+      # Release tarball of the packaging repo, which contains the binary
+      # (bin/AVWOWE), data/, run.sh, desktop file, metainfo, and icon.
       - type: archive
         url: https://github.com/xusione/io.github.xusione.AVWOWE/archive/refs/tags/v1.0.0.tar.gz
-        sha256: 0000000000000000000000000000000000000000000000000000000000000000
+        sha256: 0bb60c20ff23e89b63ff0b63799b480933005b9267765ecb44b8e3eeaa8a489c
