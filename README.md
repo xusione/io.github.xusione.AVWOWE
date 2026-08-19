@@ -9,7 +9,6 @@ storefront displays, events, and ambient installations.
 
 Homepage and user guide: https://avwowe.xusione.com/
 
-> AVWOWE is proprietary software, free to use. See [LICENSE](LICENSE) for terms.
 > This repository packages the application as a [Flatpak](https://flatpak.org/).
 
 ## Features
