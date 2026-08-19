@@ -12,8 +12,6 @@ Homepage and user guide: https://avwowe.xusione.com/
 > AVWOWE is proprietary software, free to use. See [LICENSE](LICENSE) for terms.
 > This repository packages the application as a [Flatpak](https://flatpak.org/).
 
-![AVWOWE](screenshots/1.jpg)
-
 ## Features
 
 - **Always On** — point at local folders and cycle through media continuously,
