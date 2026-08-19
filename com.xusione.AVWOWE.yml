@@ -26,12 +26,21 @@ finish-args:
   - --socket=pulseaudio
   # Network (live tickers / remote config pull arbitrary URLs)
   - --share=network
-  # Filesystem: standard media dirs by default (writable, for PNG export).
-  # Kiosk deployments pointing at custom paths should grant them per-install:
+  # Filesystem: the places media realistically lives, all writable because PNG
+  # export writes sequences to disk. Anything outside these still works, but
+  # needs a one-off grant per install:
   #   flatpak override com.xusione.AVWOWE --filesystem=/path/to/media
   - --filesystem=xdg-videos
   - --filesystem=xdg-pictures
   - --filesystem=xdg-music
+  - --filesystem=xdg-desktop
+  - --filesystem=xdg-download
+  # Removable drives and manually mounted shares: /media on Debian and Ubuntu,
+  # /run/media on Fedora and Arch, /mnt for hand-mounted NAS shares. These cover
+  # the usual kiosk setups without asking operators to configure anything.
+  - --filesystem=/media
+  - --filesystem=/run/media
+  - --filesystem=/mnt
   # The app keeps its settings, presets and remote-config caches in ~/.avwowe.
   # --persist maps that into the app's private per-install directory so the
   # writes succeed and survive restarts and updates.

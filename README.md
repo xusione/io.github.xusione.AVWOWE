@@ -31,15 +31,19 @@ Homepage and user guide: https://avwowe.xusione.com/
 
 ## Install
 
-Native builds for Raspberry Pi OS and Ubuntu are available from
-<https://avwowe.xusione.com/>.
-
-Once published on Flathub, this Flatpak build (x86_64) will be installable with:
+Download the `.flatpak` bundle (x86_64) from <https://avwowe.xusione.com/>
+and double-click it, or install it from a terminal:
 
 ```bash
-flatpak install flathub com.xusione.AVWOWE
+flatpak install AVWOWE-1.0.0-x86_64.flatpak
 flatpak run com.xusione.AVWOWE
 ```
+
+The first install also pulls the shared Freedesktop runtime, roughly 1 GB and
+once only. Checksums for released bundles are in [SHA256SUMS](SHA256SUMS).
+
+Native builds for Raspberry Pi OS (aarch64) and Ubuntu are also available from
+<https://avwowe.xusione.com/>. The Flatpak is x86_64 only.
 
 ## Build the Flatpak locally
 
@@ -64,9 +68,11 @@ flatpak run --command=sh com.xusione.AVWOWE \
 
 ## File access
 
-By default the sandbox can read/write the standard media directories
-(`~/Videos`, `~/Pictures`, `~/Music`). If your media lives elsewhere, grant the
-path once — it persists across reboots and updates:
+By default the sandbox can read and write the usual media locations: `~/Videos`,
+`~/Pictures`, `~/Music`, `~/Desktop`, `~/Downloads`, and mounted drives under
+`/media`, `/run/media` and `/mnt`. That covers most USB and network-share
+setups. For media anywhere else, grant the path once — it persists across
+reboots and updates:
 
 ```bash
 flatpak override --user com.xusione.AVWOWE --filesystem=/path/to/media
