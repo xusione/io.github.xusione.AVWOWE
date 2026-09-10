@@ -2,29 +2,28 @@
 
 **Interactive Media Player & Kiosk System**
 
-AVWOWE turns media collections into nonstop on-screen magic — continuous
+AVWOWE turns media collections into nonstop on-screen magic, continuous
 playback, scrolling tickers, dynamic overlays, picture-in-picture layers,
 live remote content, and frame-accurate PNG export. Built for home screens,
 storefront displays, events, and ambient installations.
 
 Homepage and user guide: https://avwowe.xusione.com/
 
-> AVWOWE is proprietary software, free to use. See [LICENSE](LICENSE) for terms.
 > This repository packages the application as a [Flatpak](https://flatpak.org/).
 
 ## Features
 
-- **Always On** — point at local folders and cycle through media continuously,
+- **Always On**: point at local folders and cycle through media continuously,
   with optional automatic jump cuts for a montage look.
-- **Advanced Tickers** — scrolling text bars from static text, local files, or
+- **Advanced Tickers**: scrolling text bars from static text, local files, or
   live URLs, with full font/color/size/background control.
-- **Dynamic Overlays** — animated or static corner watermarks, full-screen
+- **Dynamic Overlays**: animated or static corner watermarks, full-screen
   frames, CRT scanlines, film grain.
-- **Picture in Picture** — animated JPG/PNG/GIF layers that drift, spin, and
+- **Picture in Picture**: animated JPG/PNG/GIF layers that drift, spin, and
   tilt across the display.
-- **Live Content & Remote Config** — auto-detect added/removed files and pull
+- **Live Content & Remote Config**: auto-detect added/removed files and pull
   live text from remote URLs without restarting.
-- **High-Fidelity Export** — export compositions as frame-accurate PNG
+- **High-Fidelity Export**: export compositions as frame-accurate PNG
   sequences for video rendering.
 
 ## Install
@@ -69,7 +68,7 @@ flatpak run --command=sh com.xusione.AVWOWE \
 By default the sandbox can read and write the usual media locations: `~/Videos`,
 `~/Pictures`, `~/Music`, `~/Desktop`, `~/Downloads`, and mounted drives under
 `/media`, `/run/media` and `/mnt`. That covers most USB and network-share
-setups. For media anywhere else, grant the path once — it persists across
+setups. For media anywhere else, grant the path once, it persists across
 reboots and updates:
 
 ```bash
