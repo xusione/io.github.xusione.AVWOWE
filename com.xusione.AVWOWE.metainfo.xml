@@ -61,8 +61,18 @@
        Note: OARS rates the app itself, not the user's own media it displays. -->
   <content_rating type="oars-1.1" />
 
-  <!-- REQUIRED by Flathub. TODO: set real version + release date (YYYY-MM-DD). -->
+  <!-- Newest first. Shown as "What's New" in software centres. -->
   <releases>
+    <release version="1.1.1" date="2026-09-11">
+      <description>
+        <p>Fixes for settings and startup.</p>
+        <ul>
+          <li>Settings are no longer reset when updating to a newer version</li>
+          <li>Fixed a hang on startup when a text bar had no text source set</li>
+          <li>Added automatic recovery if the app fails to start twice in a row</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.1.0" date="2026-09-10">
       <description>
         <p>Performance improvements and bug fixes.</p>
