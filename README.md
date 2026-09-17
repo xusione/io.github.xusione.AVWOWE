@@ -28,13 +28,18 @@ Homepage and user guide: https://avwowe.xusione.com/
 
 ## Install
 
-Download the `.flatpak` bundle (x86_64) from <https://avwowe.xusione.com/>
-and double-click it, or install it from a terminal:
+Download the `.flatpak` bundle (x86_64) from <https://avwowe.xusione.com/> and
+install it from a terminal:
 
 ```bash
-flatpak install AVWOWE-1.1.1-x86_64.flatpak
+flatpak install --user AVWOWE-1.1.5-x86_64.flatpak
 flatpak run com.xusione.AVWOWE
 ```
+
+`--user` needs no root and keeps installs and updates in one scope; an update
+installed into a different scope than the original creates a second copy rather
+than replacing it. Double-clicking the bundle also works, but may install
+system-wide, in which case drop `--user` and use `sudo` when updating.
 
 The first install also pulls the shared Freedesktop runtime, roughly 1 GB and
 once only. Checksums for released bundles are in [SHA256SUMS](SHA256SUMS).
