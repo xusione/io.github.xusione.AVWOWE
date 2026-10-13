@@ -204,5 +204,5 @@ modules:
       # Release tarball of the packaging repo, which contains the binary
       # (bin/AVWOWE), data/, run.sh, desktop file, metainfo, and icon.
       - type: archive
-        url: https://github.com/xusione/io.github.xusione.AVWOWE/archive/refs/tags/v1.1.5.tar.gz
-        sha256: a1328044f2016eebd41a928614efda4cb2f89fc5fb141c9a07e9c51d3287612c
+        url: https://github.com/xusione/io.github.xusione.AVWOWE/archive/refs/tags/v1.1.6.tar.gz
+        sha256: ad6f980a39daabeca7167d405899501ce6c23d64ba1991a2d99c886943168ba1
