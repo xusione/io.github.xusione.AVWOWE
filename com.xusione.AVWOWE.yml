@@ -194,6 +194,9 @@ modules:
       - install -D -m 755 run.sh /app/bin/run.sh
       - install -D -m 755 bin/AVWOWE /app/bin/AVWOWE
       - cp -r data /app/bin/data
+      # Files copied from macOS can arrive mode 700, which leaves the app unable
+      # to read its own demo assets and icon at runtime. Normalise after copying.
+      - chmod -R a+rX /app/bin/data
       - install -D -m 644 com.xusione.AVWOWE.desktop /app/share/applications/com.xusione.AVWOWE.desktop
       - install -D -m 644 com.xusione.AVWOWE.metainfo.xml /app/share/metainfo/com.xusione.AVWOWE.metainfo.xml
       - install -D -m 644 com.xusione.AVWOWE.png /app/share/icons/hicolor/512x512/apps/com.xusione.AVWOWE.png
