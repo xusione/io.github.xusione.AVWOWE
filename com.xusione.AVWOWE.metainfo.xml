@@ -63,6 +63,11 @@
 
   <!-- Newest first. Shown as "What's New" in software centres. -->
   <releases>
+    <release version="1.1.6" date="2026-10-13">
+      <description>
+        <p>WebP image support, fixes greyscale video playback, performance improvements</p>
+      </description>
+    </release>
     <release version="1.1.5" date="2026-09-17">
       <description>
         <p>Bug fixes and stability improvements.</p>

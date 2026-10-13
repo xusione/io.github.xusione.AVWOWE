@@ -32,7 +32,7 @@ Download the `.flatpak` bundle (x86_64) from <https://avwowe.xusione.com/> and
 install it from a terminal:
 
 ```bash
-flatpak install --user AVWOWE-1.1.5-x86_64.flatpak
+flatpak install --user AVWOWE-1.1.6-x86_64.flatpak
 flatpak run com.xusione.AVWOWE
 ```
 
